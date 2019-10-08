@@ -164,9 +164,6 @@ tasks:
                     cp ../docker.d/* docker.d/ &&
                     ./docker.d/generate_version_json.sh &&
                     ./docker.d/build_image.sh /tmp/image.tar &&
-                    if [ "$PUSH_DOCKER_IMAGE" == "1" ]; then
-                      ./docker.d/push_image.sh
-                    fi
                 artifacts:
                   public/image.tar:
                     expires: {$fromNow: '8 weeks'}
