@@ -163,7 +163,7 @@ tasks:
                     cd /src/${project_name} &&
                     cp ../docker.d/* docker.d/ &&
                     ./docker.d/generate_version_json.sh &&
-                    ./docker.d/build_image.sh /tmp/image.tar &&
+                    ./docker.d/build_image.sh /tmp/image.tar
                 artifacts:
                   public/image.tar:
                     expires: {$fromNow: '8 weeks'}
