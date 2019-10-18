@@ -22,6 +22,8 @@ if [ "$ENV" == "prod" ]; then
   test_var_set 'ED25519_PRIVKEY'
 fi
 
+# XXX: bug 1589703 temp hack to test the new Firefox CI cluster
+export TASKCLUSTER_ROOT_URL=https://stage.taskcluster.nonprod.cloudops.mozgcp.net
 #
 # Validate content of certain variables
 #
