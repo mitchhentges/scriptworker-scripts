@@ -1,9 +1,6 @@
 import os
 from setuptools import setup, find_packages
 
-with open("requirements/base.in") as f:
-    install_requires = f.readlines()
-
 with open(os.path.join(os.path.abspath(os.path.dirname(__file__)), "version.txt")) as f:
     version = f.read().rstrip()
 
@@ -26,7 +23,14 @@ setup(
         ],
     },
     license="MPL2",
-    install_requires=install_requires,
+    install_requires=[
+        'arrow',
+        'Jinja2',
+        'boto3',
+        'mozilla-version',
+        'redo',
+        'scriptworker',
+    ],
     classifiers=(
         'Intended Audience :: Developers',
         'Natural Language :: English',

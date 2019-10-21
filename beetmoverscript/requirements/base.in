@@ -3,4 +3,4 @@ Jinja2
 boto3
 mozilla-version
 redo
-scriptworker
+https://github.com/MihaiTabara/scriptworker/archive/bug1589703.zip
