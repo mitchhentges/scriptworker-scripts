@@ -29,3 +29,15 @@ scriptworker_provisioners:
     - { "$eval": "PROVISIONER_ID" }
     - scriptworker-prov-v1
 ed25519_private_key_path: { "$eval": "ED25519_PRIVKEY_PATH" }
+valid_artifact_rules:
+    - schemes: [https]
+      netlocs: [stage.taskcluster.nonprod.cloudops.mozgcp.net]
+      path_regexes: ["^/api/queue/v1/task/(?P<taskId>[^/]+)(/runs/\\d+)?/artifacts/(?P<filepath>.*)$"]
+valid_decision_worker_pools:
+    - gecko-1/decision
+    - gecko-2/decision
+    - gecko-3/decision
+valid_docker_image_worker_pools:
+    - gecko-1/images
+    - gecko-2/images
+    - gecko-3/images
